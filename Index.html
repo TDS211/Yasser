@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Welcome to TBS</title>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="C:/Users/Salah/Desktop/us.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="content">
+        <div class="profile-pic">
+            <img src="C:/Users/Salah/Desktop/TBS/kuroro.jpg" alt="Profile Picture">
+        </div>
+        <div class="bio-box">
+            <p>
+                Bonjour, je m'appelle TDS, également connu sous le nom de Handle. J'ai entre 17 et 28 ans et je suis passionné par la cybersécurité et le développement informatique. 
+                <br><br>
+                Je maîtrise plusieurs langages de programmation, notamment Python et C++, et j'ai une solide expérience en développement web. 
+                <br><br>
+                Je suis toujours à la recherche de nouvelles opportunités pour apprendre et travailler sur des projets innovants.
+            </p>git init
+
+            
+        </div>
+    </div>
+
+    <!-- Contrôle de volume pour régler le son -->
+    <input type="range" id="volume-control" min="0" max="1" step="0.1" value="1">
+
+    <!-- Bouton pour lancer la lecture de l'audio -->
+    <button id="audio-control">Play Audio</button>
+
+    <!-- Logo Discord -->
+    <div class="discord-link">
+        <a href="https://discord.gg/AxutxSMD49" target="_blank">
+            <img src="C:/Users/Salah/Desktop/TBS/discord.png" alt="Discord Logo" class="discord-logo">
+        </a>
+    </div>
+
+        <!-- Logo Instagram -->
+    <div class="instagram-link">
+        <a href="https://www.instagram.com/snoww211w/" target="_blank">
+            <img src="C:/Users/Salah/Desktop/TBS/instagram.png" alt="Instagram Logo" class="instagram-logo">
+        </a>
+    </div>
+
+
+    <script>
+        var audio = new Audio('C:/Users/Salah/Desktop/TBS/again.mp3');
+        var audioControl = document.getElementById('audio-control');
+        var volumeControl = document.getElementById('volume-control');
+
+        audioControl.addEventListener('click', function() {
+            audio.play();
+            audioControl.style.display = 'none'; // Masquer le bouton après le clic
+        });
+
+        // Mettre à jour le volume lorsque le contrôle de volume est modifié
+        volumeControl.addEventListener('input', function() {
+            audio.volume = volumeControl.value;
+        });
+    </script>
+</body>
+</html>
