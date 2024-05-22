@@ -32,13 +32,13 @@ body, html {
 }
 
 .profile-pic {
-    display: inline-block;
+    display: block;
     width: 150px; /* Ajustez la taille comme nécessaire */
     height: 150px; /* Ajustez la taille comme nécessaire */
     overflow: hidden;
     border-radius: 50%;
     margin-bottom: 10px; /* Espace entre l'image et la boîte de biographie */
-    margin-top: -300px; /* Ajustez cette valeur pour déplacer l'image vers le haut */
+    margin-top: -190px; /* Ajustez cette valeur pour déplacer l'image vers le haut */
 }
 
 .profile-pic img {
@@ -55,54 +55,53 @@ body, html {
     margin-bottom: 20px; /* Space between the bio box and the text */
     backdrop-filter: blur(2px); /* Blur effect */
     color: white;
-    max-width: 300px;
-    text-align: left;
+    max-width: 400px; /* Ajustez cette valeur pour élargir la biographie */
+    width: 500%; /* Ajustez cette valeur pour étirer la biographie vers la droite */
+    height: auto; /* Pour permettre à la hauteur de s'ajuster automatiquement */
+    text-align: center; /* Alignement horizontal du texte */
     position: absolute;
-    top: calc(50% + 85px); /* Adjust as needed to position below the profile pic */
+    top: calc(50% - -100px); /* Ajustez cette valeur pour déplacer la boîte de biographie vers le haut */
     left: 50%; /* Center horizontally */
-    transform: translate(-50%, -80px);
+    transform: translate(-50%, -50%);
 }
 
 .bio-box p {
     margin: 0;
 }
 
-.discord-link {
+.discord-link, .instagram-link {
     display: block;
     text-align: center;
     position: absolute;
-    top: calc(50% +  20px); /* Ajustez cette valeur pour le déplacer plus haut */
-    left: calc(50% - 200px); /* Ajustez cette valeur pour le déplacer plus à gauche */
     transform: translateX(-50%);
 }
 
-.discord-logo {
-    width: 30px; /* Adjust the size as needed */
-    height: 30px; /* Adjust the size as needed */
-    filter: grayscale(100%); /* Make the logo black and white */
-    cursor: pointer;
-    transition: filter 0.3s ease;
-}
-
-.discord-logo:hover {
-    filter: grayscale(0%); /* Remove grayscale on hover */
+.discord-link {
+    top: calc(50% + 20px); /* Ajustez cette valeur pour le déplacer plus haut */
+    left: calc(50% - 250px); /* Ajustez cette valeur pour le déplacer plus à gauche */
 }
 
 .instagram-link {
-    position: absolute;
     top: calc(50% + 60px); /* Ajustez cette valeur pour le déplacer plus haut */
-    left: calc(50% - 200px); /* Ajustez cette valeur pour le déplacer plus à gauche */
-    transform: translateX(-50%);
+    left: calc(50% - 250px); /* Ajustez cette valeur pour le déplacer plus à gauche */
 }
 
-.instagram-logo {
+.discord-logo, .instagram-logo {
     width: 30px; /* Ajustez la taille comme nécessaire */
     height: auto; /* Assurez-vous que la hauteur est ajustée en conséquence */
-    filter: grayscale(100%); /* Rendre le logo Instagram en noir et blanc */
+    filter: grayscale(100%); /* Rendre le logo en noir et blanc */
     cursor: pointer;
     transition: filter 0.3s ease;
 }
 
-.instagram-logo:hover {
+.discord-logo:hover, .instagram-logo:hover {
     filter: grayscale(0%); /* Supprimer le noir et blanc au survol */
+}
+
+/* Style pour la barre de contrôle du volume */
+.volume-control {
+    position: absolute;
+    top: 60px; /* Ajustez la position verticale selon vos préférences */
+    left: 20px; /* Ajustez la position horizontale selon vos préférences */
+    z-index: 2; /* Assurez-vous que la barre de contrôle du volume apparaît au-dessus de la vidéo */
 }
